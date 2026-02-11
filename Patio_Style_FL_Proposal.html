@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Patio Style FL — Digital Growth Proposal by REK Marketing & Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
+    <style>
+        :root {
+            --charcoal: #1E1E1E;
+            --charcoal-mid: #2C2C2C;
+            --charcoal-light: #3A3A3A;
+            --gold: #C9A96E;
+            --gold-dark: #B08D4F;
+            --gold-glow: rgba(201, 169, 110, 0.2);
+            --sage: #7E977A;
+            --sage-light: #9BB196;
+            --cream: #F7F3ED;
+            --warm-white: #FDFBF7;
+            --stone: #D6CFC5;
+            --stone-dark: #A8A09A;
+            --text-primary: #1E1E1E;
+            --text-secondary: #6B655E;
+            --text-muted: #908A82;
+            --border-subtle: rgba(30, 30, 30, 0.07);
+            --border-gold: rgba(201, 169, 110, 0.25);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+            background: var(--warm-white);
+            font-weight: 400;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.25rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
+        .nav.scrolled {
+            background: rgba(30, 30, 30, 0.96);
+            backdrop-filter: blur(24px);
+            padding: 0.6rem 2.5rem;
+            box-shadow: 0 1px 40px rgba(0,0,0,0.2);
+        }
+        .nav-logo img {
+            height: 50px;
+            transition: height 0.4s ease;
+        }
+        .nav.scrolled .nav-logo img {
+            height: 36px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.25rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .nav-links a i { font-size: 0.85rem; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--charcoal);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 25% 40%, rgba(201, 169, 110, 0.12) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 60%, rgba(126, 151, 122, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 100%, rgba(201, 169, 110, 0.06) 0%, transparent 40%);
+        }
+        .hero-texture {
+            position: absolute;
+            inset: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        /* Decorative corner borders */
+        .hero-frame {
+            position: absolute;
+            z-index: 1;
+            width: 80px;
+            height: 80px;
+            border-color: var(--gold);
+            border-style: solid;
+            opacity: 0.2;
+        }
+        .hero-frame.tl { top: 40px; left: 40px; border-width: 1px 0 0 1px; display: none; }
+        .hero-frame.tr { top: 40px; right: 40px; border-width: 1px 1px 0 0; display: none; }
+        .hero-frame.bl { bottom: 40px; left: 40px; border-width: 0 0 1px 1px; display: none; }
+        .hero-frame.br { bottom: 40px; right: 40px; border-width: 0 1px 1px 0; display: none; }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 850px;
+            padding: 2rem;
+        }
+        .hero-client-logo {
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.2s;
+        }
+        .hero-client-logo img {
+            height: 80px;
+            filter: brightness(1.1);
+        }
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto 2rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.35s;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.45s;
+        }
+        .hero h1 {
+            font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.55s;
+            letter-spacing: -0.01em;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--stone-dark);
+            max-width: 560px;
+            margin: 0 auto 3.5rem;
+            font-weight: 300;
+            line-height: 1.75;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.65s;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            max-width: 720px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.8s;
+        }
+        .hero-stat {
+            text-align: center;
+            padding: 1.25rem 0.5rem;
+            border: 1px solid rgba(201, 169, 110, 0.12);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(10px);
+        }
+        .hero-stat-icon {
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .hero-stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cream);
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.68rem;
+            color: var(--stone-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 0.4rem;
+            line-height: 1.3;
+        }
+
+        /* ===== SECTION BASE ===== */
+        .section { padding: 6rem 2rem; }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
+        .section-header { margin-bottom: 3rem; }
+        .section-eyebrow {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .section-eyebrow i { font-size: 1rem; }
+        .section-title {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.02rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            font-weight: 300;
+            line-height: 1.75;
+        }
+
+        /* ===== OPPORTUNITY ===== */
+        .opportunity { background: var(--cream); }
+        .opp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+            gap: 1.25rem;
+        }
+        .opp-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem 1.75rem;
+            transition: all 0.35s ease;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+        .opp-card.visible { opacity: 1; transform: translateY(0); }
+        .opp-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+            border-color: var(--border-gold);
+        }
+        .opp-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+        .opp-icon.gold { background: rgba(201, 169, 110, 0.1); color: var(--gold); }
+        .opp-icon.sage { background: rgba(126, 151, 122, 0.12); color: var(--sage); }
+        .opp-icon.dark { background: rgba(30, 30, 30, 0.06); color: var(--charcoal); }
+        .opp-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+        .opp-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
+        .opp-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            line-height: 1.55;
+        }
+
+        /* ===== ASSESSMENT ===== */
+        .assessment { background: var(--charcoal); color: var(--cream); }
+        .assessment .section-title { color: var(--cream); }
+        .assessment .section-subtitle { color: var(--stone-dark); }
+        .assess-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+        .assess-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .assess-card:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: var(--border-gold);
+        }
+        .assess-card-top {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .assess-card-top i {
+            font-size: 1.4rem;
+            color: var(--gold);
+        }
+        .assess-card-top h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--cream);
+        }
+        .assess-card p {
+            font-size: 0.88rem;
+            color: var(--stone-dark);
+            line-height: 1.65;
+        }
+        .assess-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 100px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 1rem;
+        }
+        .assess-tag i { font-size: 0.75rem; }
+        .tag-critical { background: rgba(220, 80, 60, 0.12); color: #E87060; }
+        .tag-warning { background: rgba(220, 170, 60, 0.12); color: #D4AA3C; }
+        .tag-opportunity { background: rgba(126, 151, 122, 0.15); color: var(--sage-light); }
+
+        /* ===== STRATEGY ===== */
+        .strategy { background: var(--warm-white); }
+        .strategy-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+        .strategy-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .strategy-card:hover {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        .strategy-card-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+        .strategy-card:nth-child(1) .strategy-card-accent { background: var(--gold); }
+        .strategy-card:nth-child(2) .strategy-card-accent { background: var(--sage); }
+        .strategy-card:nth-child(3) .strategy-card-accent { background: var(--charcoal); }
+        .strategy-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--stone);
+            opacity: 0.2;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+        .strategy-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .strategy-card h3 i { color: var(--gold); font-size: 1.2rem; }
+        .strategy-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+        .strategy-list {
+            list-style: none;
+            margin-top: 1.25rem;
+        }
+        .strategy-list li {
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            padding-left: 1.6rem;
+            position: relative;
+        }
+        .strategy-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing { background: var(--cream); }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+        .pricing-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 50px rgba(0,0,0,0.06);
+        }
+        .pricing-card.selected {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px var(--gold), 0 16px 50px rgba(201, 169, 110, 0.12);
+        }
+        .pricing-card.featured {
+            background: var(--charcoal);
+            color: var(--cream);
+            border-color: transparent;
+        }
+        .pricing-card.featured.selected {
+            box-shadow: 0 0 0 2px var(--gold), 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--gold);
+            color: var(--charcoal);
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 0.4rem 1.1rem;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .pricing-badge i { font-size: 0.7rem; }
+        .tier-icon {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        .pricing-card.featured .tier-icon { color: var(--gold); }
+        .tier-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .tier-tagline {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        .pricing-card.featured .tier-tagline { color: var(--stone-dark); }
+        .tier-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .tier-price span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        .pricing-card.featured .tier-price span { color: var(--stone-dark); }
+        .tier-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border-subtle);
+            margin: 1.5rem 0;
+        }
+        .pricing-card.featured .tier-divider { background: rgba(255,255,255,0.08); }
+        .tier-features { list-style: none; flex: 1; }
+        .tier-features li {
+            font-size: 0.86rem;
+            padding: 0.45rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+        }
+        .pricing-card.featured .tier-features li { color: var(--stone); }
+        .tier-features li i {
+            position: absolute;
+            left: 0;
+            top: 0.55rem;
+            font-size: 0.9rem;
+            color: var(--sage);
+        }
+        .pricing-card.featured .tier-features li i { color: var(--gold); }
+        .tier-select-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            margin-top: auto;
+            padding-top: 2rem;
+            padding: 0.9rem;
+            border-radius: 12px;
+            border: 1.5px solid var(--border-subtle);
+            background: transparent;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--charcoal);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tier-select-btn i { font-size: 1rem; transition: transform 0.3s ease; }
+        .pricing-card.featured .tier-select-btn {
+            border-color: rgba(201, 169, 110, 0.4);
+            color: var(--gold);
+        }
+        .pricing-card.selected .tier-select-btn {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--charcoal);
+        }
+        .pricing-card.selected .tier-select-btn i { transform: scale(1.1); }
+
+        /* ===== ADD-ONS ===== */
+        .addons { background: var(--warm-white); }
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+        .addon-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+        }
+        .addon-card.active {
+            border-color: var(--sage);
+            background: rgba(126, 151, 122, 0.03);
+            box-shadow: 0 4px 20px rgba(126, 151, 122, 0.08);
+        }
+        .addon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        .addon-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .addon-title-row i {
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        .addon-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .addon-toggle {
+            position: relative;
+            width: 46px;
+            height: 25px;
+            background: var(--stone);
+            border-radius: 13px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            flex-shrink: 0;
+        }
+        .addon-toggle.active { background: var(--sage); }
+        .addon-toggle::after {
+            content: '';
+            position: absolute;
+            top: 2.5px;
+            left: 2.5px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+        }
+        .addon-toggle.active::after { transform: translateX(21px); }
+        .addon-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.4rem;
+        }
+        .addon-price span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        .addon-desc {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .addon-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 0.65rem;
+            font-size: 0.72rem;
+            color: var(--gold-dark);
+            font-weight: 500;
+        }
+        .addon-note i { font-size: 0.8rem; }
+
+        /* ===== CALCULATOR BAR ===== */
+        .calc-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(30, 30, 30, 0.97);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(201, 169, 110, 0.25);
+            padding: 0.9rem 2.5rem;
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .calc-bar.visible { transform: translateY(0); }
+        .calc-items {
+            display: flex;
+            gap: 2.25rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .calc-item { text-align: center; }
+        .calc-item-label {
+            font-size: 0.58rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--stone-dark);
+        }
+        .calc-item-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+        }
+        .calc-total { text-align: right; }
+        .calc-total-label {
+            font-size: 0.58rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            justify-content: flex-end;
+        }
+        .calc-total-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .calc-cta {
+            display: none;
+        }
+        .calc-cta.visible {
+            display: inline-flex;
+        }
+        .calc-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold);
+            color: var(--charcoal);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            padding: 0.75rem 1.75rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .calc-cta a:hover {
+            background: var(--gold-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(201, 169, 110, 0.3);
+        }
+        .calc-cta a i { font-size: 1rem; }
+        .calc-cta-email {
+            font-size: 0.65rem;
+            color: var(--stone-dark);
+            text-align: center;
+            margin-top: 0.4rem;
+        }
+        .calc-cta-email a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+            transition: all 0.3s;
+        }
+        .calc-cta-email a:hover { color: var(--cream); border-color: var(--cream); }
+
+        /* ===== TIMELINE ===== */
+        .timeline-section { background: var(--cream); }
+        .timeline-track {
+            position: relative;
+            padding-left: 3.5rem;
+        }
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--gold), var(--sage), var(--charcoal-light));
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.75rem;
+            opacity: 0;
+            transform: translateX(-12px);
+            transition: all 0.5s ease;
+        }
+        .timeline-item.visible { opacity: 1; transform: translateX(0); }
+        .timeline-dot {
+            position: absolute;
+            left: -3.5rem;
+            top: 6px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 3px solid var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timeline-dot i { font-size: 0.7rem; color: white; }
+        .timeline-item:nth-child(1) .timeline-dot { background: var(--gold); }
+        .timeline-item:nth-child(2) .timeline-dot { background: var(--sage); }
+        .timeline-item:nth-child(3) .timeline-dot { background: var(--charcoal); }
+        .timeline-phase {
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            margin-bottom: 0.2rem;
+        }
+        .timeline-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-item p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            max-width: 600px;
+        }
+
+        /* ===== WHY REK ===== */
+        .why-rek { background: var(--charcoal); color: var(--cream); }
+        .why-rek .section-title { color: var(--cream); }
+        .rek-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem;
+        }
+        .rek-stat {
+            text-align: center;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.02);
+        }
+        .rek-stat i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.75rem; display: block; }
+        .rek-stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .rek-stat-label {
+            font-size: 0.8rem;
+            color: var(--stone-dark);
+            margin-top: 0.4rem;
+        }
+        .rek-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .rek-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .rek-feature-icon {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            border-radius: 11px;
+            background: rgba(201, 169, 110, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rek-feature-icon i { font-size: 1.15rem; color: var(--gold); }
+        .rek-feature h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.2rem;
+        }
+        .rek-feature p {
+            font-size: 0.8rem;
+            color: var(--stone-dark);
+            line-height: 1.5;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            position: relative;
+            text-align: center;
+            padding: 6rem 2rem 7rem;
+            background: linear-gradient(170deg, var(--charcoal-mid) 0%, #151515 100%);
+            overflow: hidden;
+        }
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 40%, rgba(201, 169, 110, 0.08) 0%, transparent 65%);
+        }
+        .cta-content { position: relative; z-index: 2; }
+        .cta-logo {
+            margin-bottom: 2rem;
+        }
+        .cta-logo img { height: 60px; opacity: 0.3; }
+        .cta h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            font-size: 1.05rem;
+            color: var(--stone-dark);
+            max-width: 480px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+        .cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(126, 151, 122, 0.12);
+            border: 1px solid rgba(126, 151, 122, 0.25);
+            border-radius: 100px;
+            padding: 0.55rem 1.4rem;
+            font-size: 0.78rem;
+            color: var(--sage-light);
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .cta-badge i { font-size: 0.9rem; }
+        .cta-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .cta-contact a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .cta-contact a i { font-size: 1.1rem; }
+        .cta-contact a:hover { color: var(--cream); }
+        .cta-rek {
+            margin-top: 3rem;
+            font-size: 0.72rem;
+            color: var(--stone-dark);
+            opacity: 0.5;
+        }
+
+        /* ===== TERMS ===== */
+        .terms { background: var(--cream); border-top: 1px solid var(--border-subtle); }
+        .terms .section-title { font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+        .terms-content { max-width: 720px; }
+        .terms-content h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1.75rem;
+            margin-bottom: 0.4rem;
+        }
+        .terms-content p {
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        .terms-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(126, 151, 122, 0.1);
+            border: 1px solid rgba(126, 151, 122, 0.2);
+            border-radius: 10px;
+            padding: 0.75rem 1.25rem;
+            margin-top: 1rem;
+            font-size: 0.86rem;
+            font-weight: 500;
+            color: var(--sage);
+        }
+        .terms-highlight i { font-size: 1.1rem; }
+
+        /* ===== SOURCES ===== */
+        .sources {
+            background: var(--charcoal);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 3rem 2rem;
+        }
+        .sources .section-inner { max-width: 1100px; margin: 0 auto; }
+        .sources-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--stone-dark);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sources-title i { font-size: 0.85rem; }
+        .sources ol {
+            list-style: none;
+            counter-reset: source;
+        }
+        .sources li {
+            counter-increment: source;
+            font-size: 0.72rem;
+            color: var(--stone-dark);
+            line-height: 1.6;
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            opacity: 0.7;
+        }
+        .sources li::before {
+            content: counter(source) ".";
+            position: absolute;
+            left: 0;
+            color: var(--stone-dark);
+            font-weight: 500;
+        }
+        .sources li a {
+            color: var(--stone-dark);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(168, 160, 154, 0.3);
+            transition: all 0.3s;
+        }
+        .sources li a:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-client-logo { display: none; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+            .hero-stat-value { font-size: 1.6rem; }
+            .hero-frame { display: none; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .addons-grid { grid-template-columns: 1fr; }
+            .calc-bar {
+                flex-direction: column;
+                text-align: center;
+                padding: 0.8rem 1.5rem;
+            }
+            .calc-items { justify-content: center; gap: 1.5rem; }
+            .calc-total { text-align: center; }
+            .calc-cta a { width: 100%; justify-content: center; }
+            .section { padding: 4rem 1.5rem; }
+            .nav { padding: 1rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo">
+            <img src="images/logo-white.png" alt="Patio Style">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#opportunity"><i class="ph ph-chart-line-up"></i> Opportunity</a></li>
+            <li><a href="#strategy"><i class="ph ph-compass"></i> Strategy</a></li>
+            <li><a href="#pricing"><i class="ph ph-tag"></i> Pricing</a></li>
+            <li><a href="#timeline"><i class="ph ph-calendar-dots"></i> Timeline</a></li>
+            <li><a href="#contact"><i class="ph ph-envelope-simple"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-texture"></div>
+        <div class="hero-frame tl"></div>
+        <div class="hero-frame tr"></div>
+        <div class="hero-frame bl"></div>
+        <div class="hero-frame br"></div>
+        <div class="hero-content">
+            <div class="hero-client-logo">
+                <img src="images/logo-white.png" alt="Patio Style - Elegant Patio Living">
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-eyebrow"><i class="ph ph-sparkle"></i> Digital Growth Proposal</div>
+            <h1>Elevate Your<br><em>Digital Presence</em></h1>
+            <p class="hero-subtitle">A custom strategy to bring Central Florida's premier outdoor living showroom to the top of search, where your next customer is already looking.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-icon"><i class="ph ph-trend-up"></i></div>
+                    <div class="hero-stat-value" data-count="8.77" data-prefix="$" data-suffix="B">$0B</div>
+                    <div class="hero-stat-label">U.S. Outdoor Furniture & Kitchen Market</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-icon"><i class="ph ph-map-pin-area"></i></div>
+                    <div class="hero-stat-value" data-count="38" data-suffix="%">0%</div>
+                    <div class="hero-stat-label">of U.S. Revenue From the South</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-icon"><i class="ph ph-shopping-cart"></i></div>
+                    <div class="hero-stat-value" data-count="52" data-suffix="%">0%</div>
+                    <div class="hero-stat-label">Prefer Researching Online First</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-icon"><i class="ph ph-sun-horizon"></i></div>
+                    <div class="hero-stat-value" data-count="63" data-suffix="%">0%</div>
+                    <div class="hero-stat-label">Plan to Upgrade Outdoor Space</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPPORTUNITY -->
+    <section class="section opportunity" id="opportunity">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-binoculars"></i> The Opportunity</div>
+                <h2 class="section-title">Your Customers Are Searching.<br>Can They Find You?</h2>
+                <p class="section-subtitle">Patio Style has 50+ years of expertise and a showroom that sells itself. Your digital presence should work just as hard.</p>
+            </div>
+            <div class="opp-grid">
+                <div class="opp-card">
+                    <div class="opp-icon gold"><i class="ph ph-chart-line-up"></i></div>
+                    <div class="opp-label">Market Growth</div>
+                    <div class="opp-value">$16.9B</div>
+                    <div class="opp-desc">Projected U.S. outdoor furniture & kitchen market by 2033, nearly double from $8.77B in 2024.</div>
+                </div>
+                <div class="opp-card">
+                    <div class="opp-icon sage"><i class="ph ph-house-line"></i></div>
+                    <div class="opp-label">Homeowner Intent</div>
+                    <div class="opp-value">63%</div>
+                    <div class="opp-desc">of Americans plan to upgrade their outdoor furniture, with residential demand growing 6.4% annually.</div>
+                </div>
+                <div class="opp-card">
+                    <div class="opp-icon dark"><i class="ph ph-magnifying-glass"></i></div>
+                    <div class="opp-label">Online Research</div>
+                    <div class="opp-value">52%</div>
+                    <div class="opp-desc">of outdoor furniture shoppers now prefer researching online before visiting a showroom.</div>
+                </div>
+                <div class="opp-card">
+                    <div class="opp-icon gold"><i class="ph ph-sun"></i></div>
+                    <div class="opp-label">Sunbelt Advantage</div>
+                    <div class="opp-value">#1</div>
+                    <div class="opp-desc">The South leads U.S. outdoor furniture revenue at 38%. Florida's year-round season is your edge.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT -->
+    <section class="section assessment" id="assessment">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-clipboard-text"></i> Current Site Assessment</div>
+                <h2 class="section-title">Where Patio Style Stands Today</h2>
+                <p class="section-subtitle">Your 50+ year reputation deserves a digital presence that matches. Here's what we found reviewing patiostylefl.com.</p>
+            </div>
+            <div class="assess-grid">
+                <div class="assess-card">
+                    <div class="assess-card-top">
+                        <i class="ph ph-code"></i>
+                        <h4>Template-Based Website</h4>
+                    </div>
+                    <p>The current site uses a template platform with limited control over page speed, code efficiency, and technical SEO. A custom-coded build would dramatically improve Core Web Vitals and search performance.</p>
+                    <span class="assess-tag tag-critical"><i class="ph-bold ph-warning-circle"></i> Critical</span>
+                </div>
+                <div class="assess-card">
+                    <div class="assess-card-top">
+                        <i class="ph ph-calendar-x"></i>
+                        <h4>Outdated Content & Promotions</h4>
+                    </div>
+                    <p>The homepage hero still displays a Labor Day 2020 sale. Outdated content signals to both Google and visitors that the site isn't actively maintained, hurting trust and rankings.</p>
+                    <span class="assess-tag tag-critical"><i class="ph-bold ph-warning-circle"></i> Critical</span>
+                </div>
+                <div class="assess-card">
+                    <div class="assess-card-top">
+                        <i class="ph ph-magnifying-glass-minus"></i>
+                        <h4>SEO Foundations Missing</h4>
+                    </div>
+                    <p>No visible local landing pages, limited schema markup, and thin page content mean Google doesn't have enough signals to rank Patio Style for high-value terms in Orlando and surrounding areas.</p>
+                    <span class="assess-tag tag-warning"><i class="ph-bold ph-info"></i> Needs Work</span>
+                </div>
+                <div class="assess-card">
+                    <div class="assess-card-top">
+                        <i class="ph ph-map-trifold"></i>
+                        <h4>Local Search Untapped</h4>
+                    </div>
+                    <p>With a single prime showroom location, there's massive opportunity to own "outdoor furniture near me," "outdoor kitchens Orlando," and dozens of related local searches.</p>
+                    <span class="assess-tag tag-opportunity"><i class="ph-bold ph-rocket-launch"></i> Big Opportunity</span>
+                </div>
+                <div class="assess-card">
+                    <div class="assess-card-top">
+                        <i class="ph ph-device-mobile"></i>
+                        <h4>Mobile Experience</h4>
+                    </div>
+                    <p>Over 60% of local searches happen on mobile. The current site needs optimization for mobile speed, navigation, and conversion to capture customers searching on the go.</p>
+                    <span class="assess-tag tag-warning"><i class="ph-bold ph-info"></i> Needs Work</span>
+                </div>
+                <div class="assess-card">
+                    <div class="assess-card-top">
+                        <i class="ph ph-star"></i>
+                        <h4>Reputation Strength</h4>
+                    </div>
+                    <p>Strong reviews across Google and Yelp. We can amplify this with proper schema markup, review widgets, and a review management strategy to build on your trust signals.</p>
+                    <span class="assess-tag tag-opportunity"><i class="ph-bold ph-rocket-launch"></i> Leverage This</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGY -->
+    <section class="section strategy" id="strategy">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-strategy"></i> Our Approach</div>
+                <h2 class="section-title">A Strategy Built for Outdoor Living</h2>
+                <p class="section-subtitle">Three pillars designed to turn your digital presence into a lead engine that fills your showroom floor.</p>
+            </div>
+            <div class="strategy-cards">
+                <div class="strategy-card">
+                    <div class="strategy-card-accent"></div>
+                    <div class="strategy-num">01</div>
+                    <h3><i class="ph ph-browser"></i> Custom Website</h3>
+                    <p>A brand-new, custom-coded website designed to showcase your showroom and convert visitors into foot traffic.</p>
+                    <ul class="strategy-list">
+                        <li>Custom-coded (no WordPress, no templates)</li>
+                        <li>Mobile-first, Core Web Vitals optimized</li>
+                        <li>Gallery & product showcase pages</li>
+                        <li>Outdoor kitchen portfolio with project details</li>
+                        <li>Click-to-call, directions, and contact forms</li>
+                        <li>Built-in SEO architecture from day one</li>
+                    </ul>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-card-accent"></div>
+                    <div class="strategy-num">02</div>
+                    <h3><i class="ph ph-map-pin"></i> Local SEO Dominance</h3>
+                    <p>Systematic optimization to make Patio Style the first result Central Florida homeowners see.</p>
+                    <ul class="strategy-list">
+                        <li>Technical SEO audit & ongoing optimization</li>
+                        <li>Location-targeted landing pages</li>
+                        <li>Schema markup (LocalBusiness, Product, FAQ)</li>
+                        <li>Content strategy with blog posts</li>
+                        <li>Google Search Console & Analytics setup</li>
+                        <li>Monthly performance reporting</li>
+                    </ul>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-card-accent"></div>
+                    <div class="strategy-num">03</div>
+                    <h3><i class="ph ph-target"></i> Conversion Optimization</h3>
+                    <p>Every page optimized to turn searchers into showroom visitors and project inquiries.</p>
+                    <ul class="strategy-list">
+                        <li>Strategic CTAs throughout every page</li>
+                        <li>Showroom visit & consultation booking</li>
+                        <li>Trust signals (reviews, 50+ years in business)</li>
+                        <li>Project gallery with before/after</li>
+                        <li>Service area pages for surrounding cities</li>
+                        <li>Seasonal promotion landing pages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing" id="pricing">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-squares-four"></i> Monthly Packages</div>
+                <h2 class="section-title">Choose Your Level of Growth</h2>
+                <p class="section-subtitle">Every package includes your custom-coded website, hosting, maintenance, and ongoing SEO. No long-term contracts, ever.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- SUNDECK -->
+                <div class="pricing-card" data-tier="sundeck" data-price="1500" onclick="selectTier(this)">
+                    <div class="tier-icon"><i class="ph-light ph-sun-dim"></i></div>
+                    <div class="tier-name">Sundeck</div>
+                    <div class="tier-tagline">Foundation for growth.</div>
+                    <div class="tier-price">$1,500 <span>/month</span></div>
+                    <div class="tier-divider"></div>
+                    <ul class="tier-features">
+                        <li><i class="ph ph-check-circle"></i>Custom-coded website (built within 8 weeks)</li>
+                        <li><i class="ph ph-check-circle"></i>Hosting, maintenance & updates</li>
+                        <li><i class="ph ph-check-circle"></i>Mobile-first, Core Web Vitals optimized</li>
+                        <li><i class="ph ph-check-circle"></i>Technical SEO & site health monitoring</li>
+                        <li><i class="ph ph-check-circle"></i>Google Business Profile optimization</li>
+                        <li><i class="ph ph-check-circle"></i>Basic schema markup</li>
+                        <li><i class="ph ph-check-circle"></i>3 blog posts per month</li>
+                        <li><i class="ph ph-check-circle"></i>Monthly performance dashboard</li>
+                    </ul>
+                    <button class="tier-select-btn"><i class="ph ph-cursor-click"></i> Select Sundeck</button>
+                </div>
+                <!-- LANAI -->
+                <div class="pricing-card" data-tier="lanai" data-price="2250" onclick="selectTier(this)">
+                    <div class="tier-icon"><i class="ph-light ph-sun"></i></div>
+                    <div class="tier-name">Lanai</div>
+                    <div class="tier-tagline">Accelerated visibility & leads.</div>
+                    <div class="tier-price">$2,250 <span>/month</span></div>
+                    <div class="tier-divider"></div>
+                    <ul class="tier-features">
+                        <li><i class="ph ph-check-circle"></i>Everything in Sundeck, plus:</li>
+                        <li><i class="ph ph-check-circle"></i>8 blog posts per month</li>
+                        <li><i class="ph ph-check-circle"></i>4–6 location landing pages</li>
+                        <li><i class="ph ph-check-circle"></i>Advanced schema (Product, FAQ, Review)</li>
+                        <li><i class="ph ph-check-circle"></i>Competitor monitoring & gap analysis</li>
+                        <li><i class="ph ph-check-circle"></i>Seasonal content & promotion pages</li>
+                        <li><i class="ph ph-check-circle"></i>Image optimization & gallery SEO</li>
+                        <li><i class="ph ph-check-circle"></i>Monthly performance reporting</li>
+                    </ul>
+                    <button class="tier-select-btn"><i class="ph ph-cursor-click"></i> Select Lanai</button>
+                </div>
+                <!-- VERANDA -->
+                <div class="pricing-card featured" data-tier="veranda" data-price="2950" onclick="selectTier(this)">
+                    <div class="pricing-badge"><i class="ph-fill ph-star"></i> Recommended</div>
+                    <div class="tier-icon"><i class="ph-light ph-sun-horizon"></i></div>
+                    <div class="tier-name">Veranda</div>
+                    <div class="tier-tagline">Maximum market dominance.</div>
+                    <div class="tier-price">$2,950 <span>/month</span></div>
+                    <div class="tier-divider"></div>
+                    <ul class="tier-features">
+                        <li><i class="ph ph-check-circle"></i>Everything in Lanai, plus:</li>
+                        <li><i class="ph ph-check-circle"></i>10 blog posts per month</li>
+                        <li><i class="ph ph-check-circle"></i>8–12 location landing pages</li>
+                        <li><i class="ph ph-check-circle"></i>GEO (Generative Engine Optimization)</li>
+                        <li><i class="ph ph-check-circle"></i>Content hub & resource center</li>
+                        <li><i class="ph ph-check-circle"></i>Outdoor kitchen project case studies</li>
+                        <li><i class="ph ph-check-circle"></i>Monthly performance reporting</li>
+                    </ul>
+                    <button class="tier-select-btn"><i class="ph ph-cursor-click"></i> Select Veranda</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADD-ONS -->
+    <section class="section addons" id="addons">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-plus-circle"></i> Add-Ons</div>
+                <h2 class="section-title">Amplify Your Results</h2>
+                <p class="section-subtitle">Layer these on top of any package to accelerate growth. Toggle them on to see how they affect your monthly investment.</p>
+            </div>
+            <div class="addons-grid">
+                <!-- PPC -->
+                <div class="addon-card" data-addon="ppc" data-price="300">
+                    <div class="addon-header">
+                        <div class="addon-title-row">
+                            <i class="ph ph-google-logo"></i>
+                            <h4>Google Ads (PPC)</h4>
+                        </div>
+                        <div class="addon-toggle" onclick="toggleAddon(this)"></div>
+                    </div>
+                    <div class="addon-price">$300+ <span>/month management</span></div>
+                    <p class="addon-desc">Show up at the top of Google instantly for high-intent keywords like "outdoor furniture store near me" and "outdoor kitchens Orlando." Management fee is 20% of ad spend with a $300/month minimum.</p>
+                    <div class="addon-note"><i class="ph ph-info"></i> One-time $500 setup fee (includes taking over an existing account)</div>
+                </div>
+                <!-- GBP -->
+                <div class="addon-card" data-addon="gbp" data-price="150">
+                    <div class="addon-header">
+                        <div class="addon-title-row">
+                            <i class="ph ph-map-pin"></i>
+                            <h4>GBP Management</h4>
+                        </div>
+                        <div class="addon-toggle" onclick="toggleAddon(this)"></div>
+                    </div>
+                    <div class="addon-price">$150 <span>/month</span></div>
+                    <p class="addon-desc">Full Google Business Profile management for your Longwood location. Includes weekly posts, profile optimization, photo uploads, Q&A monitoring, and category optimization to maximize Map Pack visibility.</p>
+                    <div class="addon-note"><i class="ph ph-map-trifold"></i> 1 location included</div>
+                </div>
+                <!-- LINKS -->
+                <div class="addon-card" data-addon="links" data-price="800">
+                    <div class="addon-header">
+                        <div class="addon-title-row">
+                            <i class="ph ph-link"></i>
+                            <h4>Authority Link Building</h4>
+                        </div>
+                        <div class="addon-toggle" onclick="toggleAddon(this)"></div>
+                    </div>
+                    <div class="addon-price">$800 <span>/month</span></div>
+                    <p class="addon-desc">4 high-quality backlinks per month from authoritative, relevant websites (DR30+). Links are the #1 off-page ranking factor and dramatically accelerate your SEO results.</p>
+                    <div class="addon-note"><i class="ph ph-shield-check"></i> White-hat, editorially placed links only</div>
+                </div>
+                <!-- REVIEW MANAGEMENT -->
+                <div class="addon-card" data-addon="reviews" data-price="300">
+                    <div class="addon-header">
+                        <div class="addon-title-row">
+                            <i class="ph ph-star-half"></i>
+                            <h4>Review Management</h4>
+                        </div>
+                        <div class="addon-toggle" onclick="toggleAddon(this)"></div>
+                    </div>
+                    <div class="addon-price">$300 <span>/month</span></div>
+                    <p class="addon-desc">Automated Google review request system integrated with your existing CRM. We set up, manage, and monitor your review generation pipeline so you consistently build the social proof that drives showroom visits.</p>
+                    <div class="addon-note"><i class="ph ph-gear"></i> One-time setup fee: $500 (CRM integration & automation)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR BAR -->
+    <div class="calc-bar" id="calcBar">
+        <div class="calc-items">
+            <div class="calc-item">
+                <div class="calc-item-label">Package</div>
+                <div class="calc-item-value" id="calcTier">—</div>
+            </div>
+            <div class="calc-item" id="calcPpcWrap" style="display:none">
+                <div class="calc-item-label">Google Ads</div>
+                <div class="calc-item-value">+$300</div>
+            </div>
+            <div class="calc-item" id="calcGbpWrap" style="display:none">
+                <div class="calc-item-label">GBP</div>
+                <div class="calc-item-value">+$150</div>
+            </div>
+            <div class="calc-item" id="calcLinksWrap" style="display:none">
+                <div class="calc-item-label">Links</div>
+                <div class="calc-item-value">+$800</div>
+            </div>
+            <div class="calc-item" id="calcReviewsWrap" style="display:none">
+                <div class="calc-item-label">Reviews</div>
+                <div class="calc-item-value">+$300</div>
+            </div>
+        </div>
+        <div class="calc-total">
+            <div class="calc-total-label"><i class="ph ph-receipt"></i> Monthly Investment</div>
+            <div class="calc-total-value" id="calcTotal">$0</div>
+        </div>
+        <div class="calc-cta" id="calcCta">
+            <a id="calcCtaLink" href="#"><i class="ph ph-paper-plane-tilt"></i> Get Started</a>
+            <div class="calc-cta-email">or email <a href="mailto:tom@rekmarketing.com">tom@rekmarketing.com</a></div>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <section class="section timeline-section" id="timeline">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-path"></i> Launch Plan</div>
+                <h2 class="section-title">Your First 90 Days</h2>
+                <p class="section-subtitle">A phased approach that builds momentum from day one, with your new site live by month three.</p>
+            </div>
+            <div class="timeline-track">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="ph-bold ph-magnifying-glass"></i></div>
+                    <div class="timeline-phase">Month 1 — Foundation</div>
+                    <h4>Discovery, Audit & Architecture</h4>
+                    <p>Full technical audit of the current site, keyword research, competitive analysis, information architecture planning, and design mockups. We begin SEO groundwork immediately, including Google Business Profile optimization and schema planning, so you start gaining traction before the new site even launches.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="ph-bold ph-code"></i></div>
+                    <div class="timeline-phase">Month 2 — Build</div>
+                    <h4>Custom Website Development</h4>
+                    <p>Custom-coded development with SEO architecture baked in from the start. Gallery pages, outdoor kitchen portfolio, service pages, and location landing pages all built with conversion in mind. Content creation begins for blog posts and landing pages.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="ph-bold ph-rocket-launch"></i></div>
+                    <div class="timeline-phase">Month 3 — Launch & Accelerate</div>
+                    <h4>Go Live & Growth Mode</h4>
+                    <p>New site launches with proper redirects, XML sitemap submission, and indexation monitoring. Full SEO campaign kicks into high gear with content publishing, link building (if selected), and ongoing optimization. Monthly reporting cadence begins so you can see the momentum building.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY REK -->
+    <section class="section why-rek" id="why-rek">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-shield-checkered"></i> Why REK</div>
+                <h2 class="section-title">Built Different, On Purpose</h2>
+            </div>
+            <div class="rek-stats">
+                <div class="rek-stat">
+                    <i class="ph ph-calendar-check"></i>
+                    <div class="rek-stat-value">22+</div>
+                    <div class="rek-stat-label">Years in business</div>
+                </div>
+                <div class="rek-stat">
+                    <i class="ph ph-users-three"></i>
+                    <div class="rek-stat-value">90+</div>
+                    <div class="rek-stat-label">Active clients</div>
+                </div>
+                <div class="rek-stat">
+                    <i class="ph ph-star"></i>
+                    <div class="rek-stat-value">180+</div>
+                    <div class="rek-stat-label">5-star reviews</div>
+                </div>
+                <div class="rek-stat">
+                    <i class="ph ph-handshake"></i>
+                    <div class="rek-stat-value">0</div>
+                    <div class="rek-stat-label">Long-term contracts</div>
+                </div>
+            </div>
+            <div class="rek-features">
+                <div class="rek-feature">
+                    <div class="rek-feature-icon"><i class="ph ph-wrench"></i></div>
+                    <div>
+                        <h4>Custom-Coded, Always</h4>
+                        <p>We never use WordPress or templates. Every site is hand-coded for speed, security, and SEO performance.</p>
+                    </div>
+                </div>
+                <div class="rek-feature">
+                    <div class="rek-feature-icon"><i class="ph ph-calendar-blank"></i></div>
+                    <div>
+                        <h4>Month-to-Month</h4>
+                        <p>No long-term contracts. We earn your business every single month. You stay because we deliver results.</p>
+                    </div>
+                </div>
+                <div class="rek-feature">
+                    <div class="rek-feature-icon"><i class="ph ph-map-pin"></i></div>
+                    <div>
+                        <h4>Local SEO Experts</h4>
+                        <p>We specialize in local businesses. We know how to get you found in the map pack and local search results.</p>
+                    </div>
+                </div>
+                <div class="rek-feature">
+                    <div class="rek-feature-icon"><i class="ph ph-buildings"></i></div>
+                    <div>
+                        <h4>Orlando Based</h4>
+                        <p>Right here in Central Florida. Same market, same time zone, same understanding of your customers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="cta-content">
+            <div class="cta-logo">
+                <img src="images/logo-white.png" alt="Patio Style">
+            </div>
+            <div class="cta-badge"><i class="ph ph-seal-check"></i> No contracts. No commitments. Just results.</div>
+            <h2>Ready to Elevate Your<br>Digital Presence?</h2>
+            <p>Let's talk about bringing 50+ years of outdoor living expertise to the top of every search result in Central Florida.</p>
+            <div class="cta-contact">
+                <a href="tel:4078624600"><i class="ph ph-phone"></i> Let's Talk</a>
+                <a href="mailto:tom@rekmarketing.com"><i class="ph ph-envelope-simple"></i> tom@rekmarketing.com</a>
+            </div>
+            <p class="cta-rek">Prepared by REK Marketing & Design — Orlando, FL</p>
+        </div>
+    </section>
+
+    <!-- TERMS -->
+    <section class="section terms" id="terms">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-eyebrow"><i class="ph ph-scroll"></i> Terms</div>
+                <h2 class="section-title">Our No-Contract Policy</h2>
+            </div>
+            <div class="terms-content">
+                <p>We don't lock you into long-term contracts. You can cancel your monthly service at any time with no penalties, no hassle, and no hard feelings.</p>
+
+                <h4><i class="ph ph-house-line" style="color: var(--gold); margin-right: 0.3rem;"></i> How Website Ownership Works</h4>
+                <p>When we build a custom website for you, that site becomes yours free and clear after 12 months of service. If you decide to cancel before 12 months and want to take your website with you, there's a one-time $800 website transfer fee. This covers packaging your site files, transferring hosting, and handing everything over to you or your new provider.</p>
+                <p>After 12 months, the website is yours. Cancel whenever you want and we'll transfer everything at no charge.</p>
+
+                <h4><i class="ph ph-question" style="color: var(--gold); margin-right: 0.3rem;"></i> Why We Do It This Way</h4>
+                <p>We invest significant time and resources building custom websites from scratch (no templates, no WordPress). The transfer fee simply protects that upfront investment if someone leaves very early. It's not about locking you in. It's about making sure we can keep delivering quality work at fair prices for everyone.</p>
+
+                <div class="terms-highlight">
+                    <i class="ph ph-check-circle"></i> The short version: Cancel your service anytime.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="sources">
+        <div class="section-inner">
+            <div class="sources-title"><i class="ph ph-bookmark-simple"></i> Sources</div>
+            <ol>
+                <li>Research and Markets, "United States Outdoor Furniture and Kitchen Market Size and Share Analysis — Growth Trends and Forecast Report 2025–2033," 2025. Market valued at $8.77B in 2024, projected to reach $16.92B by 2033. <a href="https://www.researchandmarkets.com/reports/6062964/united-states-outdoor-furniture-kitchen-market" target="_blank">researchandmarkets.com</a></li>
+                <li>Mordor Intelligence, "US Outdoor Furniture Market Size, Trends &amp; Share 2030," 2025. The South accounts for 38% of U.S. outdoor furniture revenue. <a href="https://www.mordorintelligence.com/industry-reports/outdoor-furniture-market-in-united-states" target="_blank">mordorintelligence.com</a></li>
+                <li>International Casual Furnishings Association (ICFA), Annual Outdoor Furnishings Trend Report, survey conducted by Wakefield Research, 2022. 63% of Americans plan to upgrade outdoor furniture. <a href="https://www.woodworkingnetwork.com/news/woodworking-industry-news/study-63-americans-will-upgrade-outdoor-furniture-2022" target="_blank">woodworkingnetwork.com</a></li>
+                <li>Sullivans, 2022 Outdoor Spaces Consumer Survey. 52% of outdoor furniture shoppers prefer researching online before visiting a showroom. <a href="https://www.sullivangift.com/2022-Survey" target="_blank">sullivangift.com</a></li>
+                <li>StatCounter Global Stats / Think with Google, 2024. Mobile devices account for 60%+ of local search traffic. <a href="https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/local-search-conversion-statistics/" target="_blank">thinkwithgoogle.com</a></li>
+            </ol>
+        </div>
+    </section>
+
+    <script>
+        // NAV SCROLL
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ANIMATED COUNTERS
+        const counters = document.querySelectorAll('.hero-stat-value[data-count]');
+        let countersAnimated = false;
+        const animateCounters = () => {
+            if (countersAnimated) return;
+            countersAnimated = true;
+            counters.forEach(counter => {
+                const target = parseFloat(counter.dataset.count);
+                const prefix = counter.dataset.prefix || '';
+                const suffix = counter.dataset.suffix || '';
+                const isDecimal = target % 1 !== 0;
+                const duration = 2000;
+                const startTime = performance.now();
+                const update = (t) => {
+                    const elapsed = t - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = target * eased;
+                    counter.textContent = isDecimal
+                        ? prefix + current.toFixed(current < 10 ? 2 : 1) + suffix
+                        : prefix + Math.round(current) + suffix;
+                    if (progress < 1) requestAnimationFrame(update);
+                };
+                requestAnimationFrame(update);
+            });
+        };
+        setTimeout(animateCounters, 1100);
+
+        // SCROLL REVEAL
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.opp-card, .timeline-item').forEach((el, i) => {
+            el.style.transitionDelay = `${i * 0.1}s`;
+            obs.observe(el);
+        });
+
+        // PRICING
+        let selectedTier = null;
+        const addons = { ppc: false, gbp: false, links: false, reviews: false };
+
+        function selectTier(card) {
+            document.querySelectorAll('.pricing-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            selectedTier = { name: card.dataset.tier, price: parseInt(card.dataset.price) };
+            updateCalculator();
+        }
+
+        function toggleAddon(toggle) {
+            toggle.classList.toggle('active');
+            const card = toggle.closest('.addon-card');
+            const addon = card.dataset.addon;
+            addons[addon] = toggle.classList.contains('active');
+            card.classList.toggle('active', addons[addon]);
+            updateCalculator();
+        }
+
+        function updateCalculator() {
+            const bar = document.getElementById('calcBar');
+            const ctaWrap = document.getElementById('calcCta');
+            const ctaLink = document.getElementById('calcCtaLink');
+            if (!selectedTier && !Object.values(addons).some(v => v)) {
+                bar.classList.remove('visible');
+                ctaWrap.classList.remove('visible');
+                return;
+            }
+            bar.classList.add('visible');
+            let total = 0;
+            const tierLabel = document.getElementById('calcTier');
+            if (selectedTier) {
+                tierLabel.textContent = selectedTier.name.charAt(0).toUpperCase() + selectedTier.name.slice(1);
+                total += selectedTier.price;
+            } else {
+                tierLabel.textContent = '—';
+            }
+            document.getElementById('calcPpcWrap').style.display = addons.ppc ? 'block' : 'none';
+            document.getElementById('calcGbpWrap').style.display = addons.gbp ? 'block' : 'none';
+            document.getElementById('calcLinksWrap').style.display = addons.links ? 'block' : 'none';
+            document.getElementById('calcReviewsWrap').style.display = addons.reviews ? 'block' : 'none';
+            if (addons.ppc) total += 300;
+            if (addons.gbp) total += 150;
+            if (addons.links) total += 800;
+            if (addons.reviews) total += 300;
+            document.getElementById('calcTotal').textContent = '$' + total.toLocaleString();
+
+            // Show Get Started button only when a tier is selected
+            if (selectedTier) {
+                ctaWrap.classList.add('visible');
+                // Build email body with breakdown
+                const tierName = selectedTier.name.charAt(0).toUpperCase() + selectedTier.name.slice(1);
+                let body = 'Hi Tom,%0D%0A%0D%0A';
+                body += "I'd like to get started with the following package:%0D%0A%0D%0A";
+                body += 'Package: ' + tierName + ' — $' + selectedTier.price.toLocaleString() + '/mo%0D%0A';
+                if (addons.ppc) body += 'Add-On: Google Ads (PPC) — +$300/mo%0D%0A';
+                if (addons.gbp) body += 'Add-On: GBP Management — +$150/mo%0D%0A';
+                if (addons.links) body += 'Add-On: Authority Link Building — +$800/mo%0D%0A';
+                if (addons.reviews) body += 'Add-On: Review Management — +$300/mo%0D%0A';
+                body += '%0D%0ATotal Monthly Investment: $' + total.toLocaleString() + '/mo%0D%0A';
+                body += '%0D%0ALooking forward to getting started!';
+                const subject = encodeURIComponent('Patio Style FL — ' + tierName + ' Package — Let\'s Get Started');
+                ctaLink.href = 'mailto:tom@rekmarketing.com?subject=' + subject + '&body=' + body;
+            } else {
+                ctaWrap.classList.remove('visible');
+            }
+        }
+
+        // PRICING CARD TILT
+        document.querySelectorAll('.pricing-card:not(.featured)').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const rX = (y - rect.height / 2) / 35;
+                const rY = (rect.width / 2 - x) / 35;
+                if (!card.classList.contains('selected'))
+                    card.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-4px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('selected')) card.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
