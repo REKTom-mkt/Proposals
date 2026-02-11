@@ -695,7 +695,7 @@
             background: rgba(30, 30, 30, 0.97);
             backdrop-filter: blur(24px);
             border-top: 1px solid rgba(201, 169, 110, 0.25);
-            padding: 0.9rem 2.5rem;
+            padding: 1rem 2.5rem;
             z-index: 999;
             transform: translateY(100%);
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -725,6 +725,11 @@
             font-weight: 700;
             color: var(--cream);
         }
+        .calc-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
         .calc-total { text-align: right; }
         .calc-total-label {
             font-size: 0.58rem;
@@ -744,11 +749,13 @@
         }
         .calc-cta {
             display: none;
+            flex-direction: column;
+            align-items: center;
         }
         .calc-cta.visible {
-            display: inline-flex;
+            display: flex;
         }
-        .calc-cta a {
+        .calc-cta > a {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -765,23 +772,24 @@
             transition: all 0.3s ease;
             white-space: nowrap;
         }
-        .calc-cta a:hover {
+        .calc-cta > a:hover {
             background: var(--gold-dark);
             transform: translateY(-1px);
             box-shadow: 0 4px 16px rgba(201, 169, 110, 0.3);
         }
-        .calc-cta a i { font-size: 1rem; }
+        .calc-cta > a i { font-size: 1rem; }
         .calc-cta-email {
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             color: var(--stone-dark);
             text-align: center;
-            margin-top: 0.4rem;
+            margin-top: 0.3rem;
         }
         .calc-cta-email a {
+            all: unset;
             color: var(--gold);
-            text-decoration: none;
+            cursor: pointer;
+            font-size: 0.62rem;
             border-bottom: 1px solid rgba(201, 169, 110, 0.3);
-            transition: all 0.3s;
         }
         .calc-cta-email a:hover { color: var(--cream); border-color: var(--cream); }
 
@@ -1085,6 +1093,7 @@
                 padding: 0.8rem 1.5rem;
             }
             .calc-items { justify-content: center; gap: 1.5rem; }
+            .calc-right { flex-direction: column; width: 100%; }
             .calc-total { text-align: center; }
             .calc-cta a { width: 100%; justify-content: center; }
             .section { padding: 4rem 1.5rem; }
@@ -1461,13 +1470,15 @@
                 <div class="calc-item-value">+$300</div>
             </div>
         </div>
-        <div class="calc-total">
-            <div class="calc-total-label"><i class="ph ph-receipt"></i> Monthly Investment</div>
-            <div class="calc-total-value" id="calcTotal">$0</div>
-        </div>
-        <div class="calc-cta" id="calcCta">
-            <a id="calcCtaLink" href="#"><i class="ph ph-paper-plane-tilt"></i> Get Started</a>
-            <div class="calc-cta-email">or email <a href="mailto:tom@rekmarketing.com">tom@rekmarketing.com</a></div>
+        <div class="calc-right">
+            <div class="calc-total">
+                <div class="calc-total-label"><i class="ph ph-receipt"></i> Monthly Investment</div>
+                <div class="calc-total-value" id="calcTotal">$0</div>
+            </div>
+            <div class="calc-cta" id="calcCta">
+                <a id="calcCtaLink" href="#"><i class="ph ph-paper-plane-tilt"></i> Get Started</a>
+                <span class="calc-cta-email">or email <a href="mailto:tom@rekmarketing.com">tom@rekmarketing.com</a></span>
+            </div>
         </div>
     </div>
 
